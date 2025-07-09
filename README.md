@@ -8,8 +8,7 @@
 
 -- Drop tables if they exist (to avoid errors when re-running the script)
 DROP TABLE IF EXISTS Booking, Flight, Passenger, Admin, Airline, Payment;
-
--- Create Airline table
+ Create Airline table
 CREATE TABLE Airline (
     airline_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
@@ -17,7 +16,7 @@ CREATE TABLE Airline (
     email VARCHAR(100)
 );
 
--- Create Admin table
+Create Admin table
 CREATE TABLE Admin (
     admin_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100),
@@ -25,7 +24,7 @@ CREATE TABLE Admin (
     password VARCHAR(100)
 );
 
--- Create Flight table
+Create Flight table
 CREATE TABLE Flight (
     flight_id INT PRIMARY KEY AUTO_INCREMENT,
     airline_id INT,
@@ -36,7 +35,7 @@ CREATE TABLE Flight (
     FOREIGN KEY (airline_id) REFERENCES Airline(airline_id)
 );
 
--- Create Passenger table
+Create Passenger table
 CREATE TABLE Passenger (
     passenger_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100),
